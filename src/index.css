@@ -5,9 +5,129 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(226, 226, 226);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.navbar{
+  margin-top: 0;
+  height: 45px;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.1);
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+}
+
+.navbar-nav{
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+}
+
+.navbar-item{
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link{
+  padding: 5px 10px;
+  margin: 5px;
+  outline: none;
+  font-size: 1.4rem;
+  color: rgb(46, 47, 49);
+}
+
+.flex-content{
+  display: flex;
+  gap: 50px;
+}
+
+.settings{
+  text-align: left;
+  margin-left: 20px;
+  width: 80%;
+}
+
+.settings-container{
+  min-height: 80%;
+}
+
+.add-entry{
+  display: flex;
+  gap: 10px;
+  margin: 15px 0 25px 0;
+}
+
+.buttons{
+  float: right;
+}
+
+.logo{
+  z-index: -1;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.flex-component{
+  display: flex;
+  align-items: center;
+}
+
+.flex{
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  min-height: calc(100vh - 45px);
+}
+
+.sidebar{
+  padding: 10px;
+  width: 250px;
+  border-right: 2px solid rgb(207, 207, 207);
+  text-align: left;
+}
+
+.sidebar h2{
+  border-bottom: 2px solid rgb(207, 207, 207);
+  padding-bottom: 15px;
+}
+
+.sidebar .logo{
+  margin-right: 20px;
+}
+
+.list-title{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list-title p{
+  font-weight: bold;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.sidebar-ul{
+  padding: 0;
+}
+
+.side-list{
+  padding: 5px 10px;
+  display: flex;
 }
