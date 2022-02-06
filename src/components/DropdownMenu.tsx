@@ -91,7 +91,6 @@ const data = [
 ];
 
 export const DropdownMenu = () => {
-  // const [items, setbooks]=useState(getDatafromLS());
   return(
     <div className='dropdown'>
       <DropdownItem data={data}/>

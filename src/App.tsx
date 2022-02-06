@@ -4,7 +4,7 @@ import './App.css';
 import { NavItem } from './components/NavItem';
 import { Navbar } from './components/Navbar';
 import { DropdownMenu } from './components/DropdownMenu';
-import Sidebar from './components/Sidebar';
+import {Sidebar} from './components/Sidebar';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Settings from './pages/settings';
 
@@ -12,19 +12,19 @@ function App() {
   return (
     <div className="App">
       <Navbar>
-        <NavItem link='MenuItem1'>
+        <NavItem name='MenuItem1' link="https://www.freecodecamp.org/">
           <DropdownMenu />
         </NavItem>
-        <NavItem link='MenuItem2'>
+        <NavItem name='MenuItem2' link="https://www.freecodecamp.org/">
           <DropdownMenu />
         </NavItem>
-        <NavItem link='MenuItem3'>
+        <NavItem name='MenuItem3' link="https://www.freecodecamp.org/">
           <DropdownMenu />
         </NavItem>
-        <NavItem link='MenuItem4'>
+        <NavItem name='MenuItem4' link="https://www.freecodecamp.org/">
           <DropdownMenu />
         </NavItem>
-        <NavItem link='MenuItem5'>
+        <NavItem name='MenuItem5' link="https://www.freecodecamp.org/">
           <DropdownMenu />
         </NavItem>
       </Navbar>

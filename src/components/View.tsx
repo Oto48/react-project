@@ -6,7 +6,7 @@ interface Props {
 
 export const View: FC<Props> = ({items}) => {
     
-    return items.map((items: any, i:any)=>(
+    return items.map((items: any, i:number)=>(
         <p key={i}>{items.item}</p>           
     ))
 }

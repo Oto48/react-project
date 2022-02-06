@@ -71,6 +71,8 @@ a{
 }
 
 .buttons{
+  display: flex;
+  gap: 10px;
   float: right;
 }
 
@@ -128,6 +130,8 @@ ul{
 }
 
 .side-list{
-  padding: 5px 10px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
   display: flex;
 }

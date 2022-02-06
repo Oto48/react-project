@@ -1,10 +1,16 @@
 import React, {useState} from 'react'
 
-export const NavItem = (props: any) => {
+interface props{
+  name: string,
+  link: string,
+  children: object
+}
+
+export const NavItem = (props: props) => {
   const [open, setOpen] = useState(false);
   return (
     <li className='nav-item' onMouseEnter={()=> setOpen(!open)} onMouseLeave={() => setOpen(!open)}>
-      <a href="#" className='nav-link'>{props.link}</a>
+      <a href={props.link} className='nav-link' target="_blank">{props.name}</a>
       <div className='menu'>
         {open ? props.children : null}
       </div>

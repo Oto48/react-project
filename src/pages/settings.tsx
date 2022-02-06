@@ -27,11 +27,11 @@ function Settings(){
     setTitle('New Item');
   }
 
-  const save=(e:any)=>{
+  const save=()=>{
     localStorage.setItem('items',JSON.stringify(items));
   }
 
-  const cancel=(e:any)=>{
+  const cancel=()=>{
     setitems(getDatafromLS())
   }
 

@@ -3,7 +3,7 @@ import "../App.css";
 import {SidebarData, AdministrationData} from "./SidebarData";
 import { Button } from '@fluentui/react-northstar'
 
-function Sidebar(){
+export const Sidebar = () =>{
     return(
         <div className="sidebar">
             <h2>Settings</h2>
@@ -48,5 +48,3 @@ function Sidebar(){
         </div>
     )
 }
-
-export default Sidebar

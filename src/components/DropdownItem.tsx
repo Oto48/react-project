@@ -41,7 +41,18 @@ const styleConf = {
     },
 };
 
-export default function DropdownItem(props:any){
+interface Props{
+  data: Array<DataArray>
+}
+
+interface DataArray{
+  label: string,
+  key: number | string,
+  items: JSX.Element
+}
+
+
+export default function DropdownItem(props:Props){
     return(
         <div className="dropdown-item">
             <ReactMegaMenu 
