@@ -44,7 +44,7 @@ function Settings(){
           <p>Here's an example of how a section can be used to group inputs</p>
           <div className='add-entry'>
             <Button content="+ Add entry" primary onClick={handleAdditemSubmit}/>
-            <Input icon={<div className='logo'><SearchIcon /></div>} placeholder="Search..." />
+            <Input icon={<div className='logo'><SearchIcon /></div>} placeholder="Search..." className='search'/>
           </div>
           <List />
           <View items={items}/>
