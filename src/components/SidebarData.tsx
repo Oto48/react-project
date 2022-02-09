@@ -1,7 +1,7 @@
 import React from "react";
 import { ComposeIcon } from '@fluentui/react-icons-northstar'
 
-export const SidebarData = [
+export const SettingsData = [
     {
         title: "Step 1",
         icon: <div className='logo'><ComposeIcon /></div>,

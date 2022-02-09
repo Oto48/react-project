@@ -10,25 +10,75 @@ const getDatafromLS=()=>{
       return JSON.parse(data);
     }
     else{
-      return []
+      return [
+        {
+          id: 'tree-title-customization-item-1',
+          title: 'Navigation Item 1',
+          items: [
+            {
+              id: 'sub-tree-title-customization-item-1',
+              title: 'Sub Navigation Item 1',
+            },
+          ],
+        },
+        {
+          id: 'tree-title-customization-item-2',
+          title: 'Navigation Item 2',
+          items: [
+            {
+              id: 'sub-tree-title-customization-item-2',
+              title: 'Sub Navigation Item 1',
+            },
+          ],
+        },
+        {
+          id: 'tree-title-customization-item-3',
+          title: 'Navigation Item 3',
+          items: [
+            {
+              id: 'sub-tree-title-customization-item-3',
+              title: 'Sub Navigation Item 1',
+            },
+          ],
+        },
+      ]
     }
 }
 
 function Settings(){
 
-  const [items, setitems]=useState(getDatafromLS());
-  const [item, setTitle]=useState('New Item');
-  const handleAdditemSubmit=(e:any)=>{
+  const [oldItems, setitems]=useState(getDatafromLS());
+  const [titleName, setTitle]=useState('')
+  // const [item, setTitle]=useState('New Item');
+  const addItem=(e:any)=>{
     e.preventDefault();
+    // let newItem={
+    //   item,
+    // }
+    // setitems([...items,newItem]);
+    // setTitle('New Item');
+
+    let lastItem = oldItems.at(-1);
+    let idNumber = +lastItem.id.split('-').at(-1) + 1;
+    let id = "tree-title-customization-item-"+idNumber;
+    let title = 'Navigation Item '+idNumber;
+    let items = [{
+      id: idNumber+'-sub-tree-title-customization-item-1',
+      title: titleName
+    }];
+    
     let newItem={
-      item,
+      id,
+      title,
+      items
     }
-    setitems([...items,newItem]);
-    setTitle('New Item');
+    setitems([...oldItems, newItem]);
+    setTitle("")
   }
 
+
   const save=()=>{
-    localStorage.setItem('items',JSON.stringify(items));
+    localStorage.setItem('items',JSON.stringify(oldItems));
   }
 
   const cancel=()=>{
@@ -43,11 +93,13 @@ function Settings(){
           <h3>Add Navigation entries</h3>
           <p>Here's an example of how a section can be used to group inputs</p>
           <div className='add-entry'>
-            <Button content="+ Add entry" primary onClick={handleAdditemSubmit}/>
+            <Button content="+ Add entry" primary onClick={addItem} disabled={titleName === ""} />
             <Input icon={<div className='logo'><SearchIcon /></div>} placeholder="Search..." className='search'/>
+            <form>
+            <Input type="text" className='search' onChange={(e:any)=> setTitle(e.target.value)} value={titleName} placeholder="Set Title"/>
+            </form>
           </div>
-          <List />
-          <View items={items}/>
+          <List items={oldItems}/>
         </div>
         <div className='buttons'>
           <Button content="Discard" secondary onClick={cancel}/>

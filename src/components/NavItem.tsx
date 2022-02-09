@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 
 interface props{
-  name: string,
-  link: string,
-  children: object
+  name: string;
+  link: string;
+  children: JSX.Element;
 }
 
 export const NavItem = (props: props) => {

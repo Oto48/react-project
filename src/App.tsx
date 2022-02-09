@@ -15,7 +15,7 @@ function App() {
         <NavItem name='MenuItem1' link="https://www.freecodecamp.org/">
           <DropdownMenu />
         </NavItem>
-        <NavItem name='MenuItem2' link="https://www.freecodecamp.org/">
+        {/* <NavItem name='MenuItem2' link="https://www.freecodecamp.org/">
           <DropdownMenu />
         </NavItem>
         <NavItem name='MenuItem3' link="https://www.freecodecamp.org/">
@@ -26,7 +26,7 @@ function App() {
         </NavItem>
         <NavItem name='MenuItem5' link="https://www.freecodecamp.org/">
           <DropdownMenu />
-        </NavItem>
+        </NavItem> */}
       </Navbar>
       <div className='flex'>
         <Sidebar />

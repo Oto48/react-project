@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import {SidebarData, AdministrationData} from "./SidebarData";
+import {SettingsData, AdministrationData} from "./SidebarData";
 import { Button } from '@fluentui/react-northstar'
 
 export const Sidebar = () =>{
@@ -10,7 +10,7 @@ export const Sidebar = () =>{
             <ul className="sidebar-ul">
                 <div className="list-title"><Button circular content="1" primary /><p>Settings</p></div>
                 <ul>
-                {SidebarData.map((val, key)=>{
+                {SettingsData.map((val, key)=>{
                     return(
                         <li
                         key={key}

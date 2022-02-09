@@ -1,20 +1,7 @@
 import React, { useState } from 'react';
 import DropdownItem from "./DropdownItem";
-import { View } from '../components/View';
-
-const getDatafromLS=()=>{
-  const data = localStorage.getItem('items');
-  if(data){
-    return JSON.parse(data);
-  }
-  else{
-    return []
-  }
-}
-
 
 const Career = () => {
-  const [items, setitems]=useState(getDatafromLS());
   return(
     <div>
       <div>
@@ -59,13 +46,6 @@ const Travel = () => {
     </div>
   );
 };
-
-const NewItems = () => {
-  const [items, setitems]=useState(getDatafromLS());
-  return(
-    <View items={items}/>
-  );
-};
   
 const data = [
   {
@@ -82,18 +62,13 @@ const data = [
     label: "Sub Menu Item 3",
     key: 3,
     items: <div className='flex-content'><Career /><Travel /></div>
-  },
-  {
-    label: "New Items",
-    key: "New Items",
-    items: <NewItems />
   }
 ];
 
-export const DropdownMenu = () => {
+export const DropdownMenu = (props: any) => {
   return(
     <div className='dropdown'>
-      <DropdownItem data={data}/>
+      <DropdownItem data={[{label:props.items[0].title, key: props.items[0].id, items: <div className='flex-content'><Career /><Travel /></div>}]}/>
     </div>
   )
 }

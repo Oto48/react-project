@@ -4,18 +4,19 @@ import { ReactMegaMenu } from "react-mega-menu";
 const styleConf = {
     menuProps: {
       style: {
-        backgroundColor: "rgb(220, 220, 220)",
-        width: "250px",
+        backgroundColor: "rgb(230, 230, 230)",
+        width: "240px",
         margin: "15px 0",
         borderRadius: "4px",
         boxShadow: "rgba(0, 0, 0, 0.15) -1.95px 1.95px 2.6px",
         textAlign: "left",
+        padding: "0",
         zIndex: 1
       }
     },
     contentProps: {
       style: {
-        margin: "20px 0",
+        margin: "10px 0",
         backgroundColor:"white",
         textAlign: "left",
         padding: "5px 25px",
@@ -54,12 +55,12 @@ interface DataArray{
 
 export default function DropdownItem(props:Props){
     return(
-        <div className="dropdown-item">
-            <ReactMegaMenu 
-                direction="right"
-                data={props.data}
-                styleConfig={styleConf}
-            />
-        </div>
+      <div className="dropdown-item">
+        <ReactMegaMenu 
+          direction="right"
+          data={props.data}
+          styleConfig={styleConf}
+        />
+      </div>
     )
 }
