@@ -95,10 +95,10 @@ function Settings(){
           <div className='add-entry'>
             <Button content="+ Add entry" primary onClick={addItem} disabled={titleName === ""} />
             <Input icon={<div className='logo'><SearchIcon /></div>} placeholder="Search..." className='search'/>
-            <form>
-            <Input type="text" className='search' onChange={(e:any)=> setTitle(e.target.value)} value={titleName} placeholder="Set Title"/>
-            </form>
           </div>
+          <form>
+            <Input type="text" className='search' onChange={(e:any)=> setTitle(e.target.value)} value={titleName} placeholder="Set Title"/>
+          </form>
           <List items={oldItems}/>
         </div>
         <div className='buttons'>
