@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import List from "../components/Tree";
 import { SearchIcon } from '@fluentui/react-icons-northstar'
 import { Button, Input } from '@fluentui/react-northstar'
-import { View } from '../components/View';
 
 const getDatafromLS=()=>{
     const data = localStorage.getItem('items');
@@ -14,6 +13,7 @@ const getDatafromLS=()=>{
         {
           id: 'tree-title-customization-item-1',
           title: 'Navigation Item 1',
+          link: "https://www.freecodecamp.org/",
           items: [
             {
               id: 'sub-tree-title-customization-item-1',
@@ -24,6 +24,7 @@ const getDatafromLS=()=>{
         {
           id: 'tree-title-customization-item-2',
           title: 'Navigation Item 2',
+          link: "https://www.freecodecamp.org/",
           items: [
             {
               id: 'sub-tree-title-customization-item-2',
@@ -34,6 +35,7 @@ const getDatafromLS=()=>{
         {
           id: 'tree-title-customization-item-3',
           title: 'Navigation Item 3',
+          link: "https://www.freecodecamp.org/",
           items: [
             {
               id: 'sub-tree-title-customization-item-3',
@@ -49,15 +51,7 @@ function Settings(){
 
   const [oldItems, setitems]=useState(getDatafromLS());
   const [titleName, setTitle]=useState('')
-  // const [item, setTitle]=useState('New Item');
   const addItem=(e:any)=>{
-    e.preventDefault();
-    // let newItem={
-    //   item,
-    // }
-    // setitems([...items,newItem]);
-    // setTitle('New Item');
-
     let lastItem = oldItems.at(-1);
     let idNumber = +lastItem.id.split('-').at(-1) + 1;
     let id = "tree-title-customization-item-"+idNumber;
@@ -103,7 +97,9 @@ function Settings(){
         </div>
         <div className='buttons'>
           <Button content="Discard" secondary onClick={cancel}/>
-          <Button content="Save" primary onClick={save}/>
+          <form>
+            <Button content="Save" primary onClick={save}/>
+          </form>
         </div>
       </div>
     )

@@ -11,23 +11,7 @@ import Settings from './pages/settings';
 function App() {
   return (
     <div className="App">
-      <Navbar>
-        <NavItem name='MenuItem1' link="https://www.freecodecamp.org/">
-          <DropdownMenu />
-        </NavItem>
-        {/* <NavItem name='MenuItem2' link="https://www.freecodecamp.org/">
-          <DropdownMenu />
-        </NavItem>
-        <NavItem name='MenuItem3' link="https://www.freecodecamp.org/">
-          <DropdownMenu />
-        </NavItem>
-        <NavItem name='MenuItem4' link="https://www.freecodecamp.org/">
-          <DropdownMenu />
-        </NavItem>
-        <NavItem name='MenuItem5' link="https://www.freecodecamp.org/">
-          <DropdownMenu />
-        </NavItem> */}
-      </Navbar>
+      <Navbar />
       <div className='flex'>
         <Sidebar />
         <Router>
